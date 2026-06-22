@@ -4,6 +4,7 @@ async function loadSheetData() {
   const response = await fetch(csvUrl);
   const csvText = await response.text();
 
+    console.log("CSV TEXT BELOW");
   console.log(csvText);
 
   const rows = csvText
