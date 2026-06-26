@@ -23,11 +23,11 @@ function makeTable(json) {
         const tr = document.createElement("tr");
 
         const name = row.c[0]?.v ?? "";
-        const cost = row.c[1]?.v ?? "";
+        const value = row.c[1]?.v ?? "";
 
         tr.innerHTML = `
             <td>${name}</td>
-            <td>${cost}</td>
+            <td>${value}</td>
         `;
 
         tbody.appendChild(tr);
