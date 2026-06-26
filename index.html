@@ -1,16 +1,36 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Google Sheet</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+            </tr>
+            <tbody class ="tbody">
 
-<html>
-    <head>
-    <title>Most Expensive Taxi</title>
-    </head>
-
-    <body>
-
-    <table id="sheetTable">
-        <thead></thead>
-        <tbody></tbody>
+            </tbody>
+        </thead>
     </table>
 
-    </body>
+    <script>
+        const tbody = document.querySelector(".tbody")
+
+        const url = "https://docs.google.com/spreadsheets/d/1NfkJEPKOBWTya8gBT3RMu-FFPKEEdFinqF9cF7A1WzA/gviz/tq?sheet=leaderboard_sheets"
+
+        fetch(url).then(response => reponse.text()).then(data => {
+            console.log(data)
+            const jsonPart = data.split("setResponse(")[1];
+            const jsonText = jsonPart.slice(0, jsonPart.length - 2)
+            const toJson = JSON.parse(jsonText);
+            //const rows = toJson.tables();
+            console.log(jsonText);
+        }).catch(error => console.log(error))
+    </script>
+</body>
 </html>
