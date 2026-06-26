@@ -1,4 +1,7 @@
-function sheetFetcher() {
+// Runs script on loading
+fetchSheet();
+
+function fetchSheet() {
     const tbody = document.querySelector(".tbody")
 
     const url = "https://docs.google.com/spreadsheets/d/1NfkJEPKOBWTya8gBT3RMu-FFPKEEdFinqF9cF7A1WzA/gviz/tq?sheet=most_expensive_taxi"
