@@ -1,12 +1,11 @@
-// Runs script on loading
-fetchSheet();
-
 console.log("Successfully loaded sheet fetcher");
 
-function fetchSheet(name) {
+function fetchSheet(id) {
+    console.log("Running fetchSheet() script for" + name);
+
     const tbody = document.querySelector(".tbody")
 
-    const url = "https://docs.google.com/spreadsheets/d/1NfkJEPKOBWTya8gBT3RMu-FFPKEEdFinqF9cF7A1WzA/gviz/tq?sheet=" + name;
+    const url = "https://docs.google.com/spreadsheets/d/1NfkJEPKOBWTya8gBT3RMu-FFPKEEdFinqF9cF7A1WzA/gviz/tq?sheet=" + id;
 
     fetch(url).then(response => response.text()).then(data => {
         const jsonPart = data.split("setResponse(")[1];
