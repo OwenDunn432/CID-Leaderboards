@@ -1,5 +1,6 @@
 // Runs script on loading
 fetchSheet();
+console.log("Running script");
 
 function fetchSheet() {
     const tbody = document.querySelector(".tbody")
