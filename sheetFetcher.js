@@ -1,5 +1,5 @@
 function fetchSheet(id) {
-    console.log("Running fetchSheet() script for: " + id);
+    console.log("Running fetchSheet() script");
 
     const tbody = document.querySelector(".tbody")
 
@@ -11,4 +11,9 @@ function fetchSheet(id) {
         const toJson = JSON.parse(jsonText);
         console.log(toJson);
     }).catch(error => console.log(error))
+
+    console.log(table.rows[2].c[0]);
+
+    //table.rows[1].c[0].v
+    //table.rows[2].c[0]
 }
