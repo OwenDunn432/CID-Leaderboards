@@ -1,5 +1,5 @@
 function fetchSheet(id) {
-    console.log("Running fetchSheet() script for" + name);
+    console.log("Running fetchSheet() script for: " + id);
 
     const tbody = document.querySelector(".tbody")
 
