@@ -12,8 +12,24 @@ function fetchSheet(id) {
         console.log(toJson);
     }).catch(error => console.log(error))
 
-    console.log(table.rows[2].c[0]);
-
-    //table.rows[1].c[0].v
-    //table.rows[2].c[0]
+    makeTable(toJson);
 }
+
+function makeTable(json) {
+    const rows = json.table.rows;
+    const tbody = document.querySelector(".tbody");
+
+    rows.forEach(row => {
+        const tr = document.createElement("tr");
+
+        const name = row.c[0]?.v ?? "";
+        const cost = row.c[1]?.v ?? "";
+
+        tr.innerHTML = `
+            <td>${name}</td>
+            <td>${cost}</td>
+        `;
+
+        tbody.appendChild(tr);
+    });
+}   
