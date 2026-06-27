@@ -5,43 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CID Leaderboards</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
 
+    <!-- Header Section -->
     <header class="hero">
         <h1>CID Leaderboards</h1>
+        <p>This is the CID leaderboards page!</p>
     </header>
+
+    <!-- Nav Bar -->
+    <nav>
+        <a href="">Most Expensive Taxi</a>
+    </nav>
 
     <h2>Current Leaderboards</h2>
 
-    <div class = "leaderboards">
+    <!-- Leaderboards Section -->
+    <div class="leaderboards">
+    
+        <!-- Most Expensive Taxi Card-->
+        <article class="card">
+            <table id="most_expensive_taxi">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody class ="tbody"></tbody>
+            </table>
+        </article>
 
-    <article class="card">
-
-        <table id="most_expensive_taxi">
-
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Cost</th>
-                </tr>
-            </thead>
-
-            <tbody class ="tbody"></tbody>
-
-        </table>
-
-    </article>
+        <!-- Card 2 -->
+        <article class="card">
+            <table id="article_2">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody class ="tbody"></tbody>
+            </table>
+        </article>
 
     </div>
 
     <footer>
         CID Leaderboards • Updated automatically
     </footer>
-
-    
 
     <!-- scripts -->
     <script src="sheetFetcher.js"></script>

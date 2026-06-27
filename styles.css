@@ -15,13 +15,13 @@ body {
     text-align: center;
     padding: 50px 20px;
     background: linear-gradient(135deg, #111, #1f1f3a);
-    border-bottom: 3px solid #FFC107;
+    border-bottom: 3px solid #ec14ec;
 }
 
 .hero h1 {
     font-size: 2.2rem;
-    color: #FFC107;
-    text-shadow: 0 0 10px #FFC107;
+    color: #ec14ec;
+    text-shadow: 0 0 10px #ec14ec;
 }
 
 .hero p {
