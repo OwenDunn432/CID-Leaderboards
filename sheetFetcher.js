@@ -2,7 +2,7 @@
  * This successfully works to make a table out of values in a Google sheet.
  */
 
-function fetchSheet(id) {
+function fetchSheet(id, tableId) {
     console.log("Running fetchSheet() script");
 
     const tbody = document.querySelector(".tbody");
@@ -20,7 +20,7 @@ function fetchSheet(id) {
 
 function makeTable(json) {
     const rows = json.table.rows;
-    const tbody = document.querySelector(".tbody");
+    const tbody = document.querySelector(tableId);
 
     rows.forEach(row => {
         const tr = document.createElement("tr");
