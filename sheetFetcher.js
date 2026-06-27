@@ -1,3 +1,7 @@
+/**
+ * This successfully works to make a table out of values in a Google sheet.
+ */
+
 function fetchSheet(id) {
     console.log("Running fetchSheet() script");
 
@@ -11,10 +15,8 @@ function fetchSheet(id) {
         const toJson = JSON.parse(jsonText);
         console.log(toJson);
         makeTable(toJson);
-    }).catch(error => console.log(error))
-
-    
-}
+    }).catch(error => console.log(error))    
+} 
 
 function makeTable(json) {
     const rows = json.table.rows;
