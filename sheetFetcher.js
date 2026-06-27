@@ -5,8 +5,6 @@
 function fetchSheet(id, tableId) {
     console.log("Running fetchSheet() script");
 
-    const tbody = document.querySelector(".tbody");
-
     const url = "https://docs.google.com/spreadsheets/d/1NfkJEPKOBWTya8gBT3RMu-FFPKEEdFinqF9cF7A1WzA/gviz/tq?gid=" + id;
 
     fetch(url).then(response => response.text()).then(data => {
@@ -14,11 +12,11 @@ function fetchSheet(id, tableId) {
         const jsonText = jsonPart.slice(0, jsonPart.length - 2)
         const toJson = JSON.parse(jsonText);
         console.log(toJson);
-        makeTable(toJson);
+        makeTable(toJson, tableId);
     }).catch(error => console.log(error))    
 } 
 
-function makeTable(json) {
+function makeTable(json, tableId) {
     const rows = json.table.rows;
     const tbody = document.querySelector(tableId);
 
