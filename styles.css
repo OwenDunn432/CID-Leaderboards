@@ -1,3 +1,20 @@
+/**
+ * CID Leaderboards - Retro Arcade Theme
+ */
+
+:root {
+    --bg: #070712;
+    --bg2: #111127;
+
+    --cyan: #2de2e6;
+    --blue: #035ee8;
+    --pink: #f6019d;
+    --purple: #9700cc;
+
+    --white: #ffffff;
+    --text: #bfc3df;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,82 +22,273 @@
 }
 
 body {
-    font-family: "Arial Black", system-ui, sans-serif;
-    background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
-    color: #fff;
+    font-family: "Orbitron", Arial, sans-serif;
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+    radial-gradient(circle at top, rgba(151,0,204,.3), transparent 45%),
+    linear-gradient(180deg, #090913, #070710);
 }
 
-/* ================= HERO ================= */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #111, #1f1f3a);
-    border-bottom: 3px solid #ec14ec;
+/* ============ CRT SCANLINES ============ */
+
+body::after {
+    content:"";
+    position:fixed;
+    inset:0;
+    background:repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,.015) 3px
+    );
+    pointer-events:none;
+    z-index:-1;
 }
 
-.hero h1 {
-    font-size: 2.2rem;
-    color: #ec14ec;
-    text-shadow: 0 0 10px #ec14ec;
+/*============ HEADER ============ */
+header {
+    text-align:center;
+    padding:50px 20px;
+    box-shadow:0 0 25px rgba(246,1,157,.35);
 }
 
-.hero p {
-    margin-top: 10px;
-    color: #ccc;
+header h1 {
+    font-size:3.5rem;
+    color:var(--pink);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    text-shadow:0 0 3.5px var(--pink);
+    transition: all 0.2s ease;
 }
 
-/* ================= CARD ================= */
+header h1:hover {
+    color: var(--white);
+    text-shadow: 0 0 3px var(--cyan);
+    transform: translate(0px, -0.1px) scale(1.05);
+    cursor: default;
+}
+
+header p {
+    margin-top:15px;
+    color:var(--text);
+}
+
+/*============ NAV BAR ============ */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+
+    background: var(--bg2);
+    border-top: 2px solid var(--pink);
+    border-bottom: 2px solid var(--pink);
+    box-shadow: 0 0 8px var(--pink);
+}
+
+nav a {
+    color: var(--cyan);
+    text-decoration: none;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--white);
+    text-shadow: 0 0 2px var(--cyan);
+    transform: translate(0px, -0.1px) scale(1.05);
+}
+
+/*============ LEADERBOARDS ============ */
+.leaderboards {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+    padding:35px 15%;
+}
+
+h2 {
+    font-size:2rem;
+    color:var(--cyan);
+    letter-spacing:3px;
+    text-shadow:0 0 2px var(--cyan);
+}
+
+h2:hover {
+    color: var(--white);
+    text-shadow: 0 0 3px var(--cyan);
+    transform: translate(0px, -0.1px) scale(1.05);
+    cursor: default;
+}
+
+/*============ CARD ============ */
 .card {
-    width: 100%;
-    background: linear-gradient(145deg, #1b1b2f, #141427);
-    border: 1px solid rgba(255, 193, 7, 0.3);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 0 18px rgba(255, 193, 7, 0.12);
+    width:min(900px,90%);
+    background:var(--bg2);
+    border:2px solid var(--purple);
+    border-radius:12px;
+    padding:20px;
+    position:relative;
+    box-shadow: 0 0 8px var(--purple);
+    transition:.25s;
 }
 
-/* ================= TABLE ================= */
+.card:hover {
+    transform:translateY(-4px) scale(1.025);
+    box-shadow: 0 0 20px var(--purple);
+}
+
+.card h3 {
+    color:var(--pink);
+    font-size:1.25rem;
+    font-weight:bold;
+    margin-bottom:10px;
+    text-transform:uppercase;
+}
+
+.card p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.card h3 {
+    cursor: default;
+}
+
+/*============ TABLE ============ */
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width:100%;
+    border-collapse:collapse;
 }
 
 thead {
-    display: none;
+    font-weight:bold;
+    font-size:1.25rem;
+    border-bottom: 1px solid var(--pink);
+}
+
+thead tr:hover {
+    background: transparent;
+    box-shadow: none;
+    
 }
 
 tr {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    transition: background 0.2s ease;
+    font-weight:bold;
+    text-align:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 40px;
+    border-bottom:none;
+    transition:.2s;
+    cursor: default
+}
+
+tr:last-child {
+    border:none;
 }
 
 tr:hover {
-    background: rgba(255, 193, 7, 0.08);
+    background:rgba(45,226,230,.08);
+    box-shadow:inset 5px 0 var(--pink);
 }
 
-/* ================= CELLS ================= */
-td:nth-child(1) {
-    color: #FFC107;
-    font-weight: bold;
-    max-width: 40px;
+/*============ SCORE SUBMISSION FORM ============ */
+.score_form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
 }
 
-td:nth-child(2) {
-    color: #fff;
-}
-
-td:nth-child(3) {
-    color: #00ffcc;
-    text-align: right;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #777;
+.score_form label {
+    color: var(--text);
     font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.score_form input,
+.score_form select {
+    padding: 10px;
+    border: 2px solid var(--purple);
+    background: var(--bg);
+    color: var(--white);
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+    font-family: inherit;
+}
+
+.score_form input:focus,
+.score_form select:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 10px rgba(45,226,230,.25);
+}
+
+.score_form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    padding: 10px 40px 10px 12px;
+    border: 2px solid var(--purple);
+    background: var(--bg);
+    color: var(--white);
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-family: inherit;
+    letter-spacing: 0.5px;
+
+    transition: 0.2s;
+}
+
+/* Button */
+.score_form button {
+    margin-top: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--pink);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.score_form button:hover {
+    background: var(--cyan);
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*============ FOOTER ============ */
+footer{
+    text-align:center;
+    color:#8080a0;
+    padding:35px;
+    border-top:1px solid rgba(151,0,204,.25);
 }

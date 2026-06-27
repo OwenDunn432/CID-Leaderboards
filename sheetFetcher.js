@@ -19,7 +19,7 @@ function fetchSheet(id, tableId) {
 function makeTable(json, tableId) {
     const rows = json.table.rows;
 
-    const table = document.querySelector(tableId);
+    const table = document.querySelector("#" + tableId);
     const tbody = table.querySelector("tbody");
 
     rows.forEach((row, index = 0) => {

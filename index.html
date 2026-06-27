@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CID Leaderboards</title>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <!-- Header Section -->
-    <header class="hero">
+    <header>
         <h1>CID Leaderboards</h1>
-        <p>This is the CID leaderboards page!</p>
+        <p>This is the CID leaderboards page! Here is a description of this page!</p>
     </header>
 
     <!-- Nav Bar -->
     <nav>
-        <a href="">Most Expensive Taxi</a>
+        <a href="">Taxi Cost</a>
+        <a href="">Second Link</a>
+        <a href="">Third Link</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFIALWVALkwmnSRVYBl-EsQ_hLqI6AGEv2CtDCLYuL75yW5g/viewform?usp=dialog">New High Score Submission</a>
     </nav>
-
-    <h2>Current Leaderboards</h2>
 
     <!-- Leaderboards Section -->
     <div class="leaderboards">
+
+        <h2>Current Leaderboards</h2>
     
-        <!-- Most Expensive Taxi Card-->
+        <!-- Taxi Cost -->
         <article class="card">
             <table id="most_expensive_taxi">
                 
-                <h3>Most Expensive Taxi</h3>
+                <h3>Taxi Cost</h3>
                 
                 <thead>
                     <tr>
@@ -42,9 +45,41 @@
                 <tbody class ="tbody"></tbody>
             </table>
         </article>
+    
+
+        <!-- Score Submission Form -->
+        <article class="card">
+
+            <h3>Submit New Score</h3>
+            <p> Use this form to submit a new score to the leaderboards! All submissions will be automatically updated to the site.</p>
+
+            <form class="score_form">
+
+                <!-- Name dropdown -->
+                <label for="name">Name</label>
+                <select id="name" required>
+                    <option value="" disabled selected>Select player</option>
+                    <option value="Owen">Owen Dunn</option>
+                </select>
+
+                <!-- Category dropdown -->
+                <label for="category">Score Category</label>
+                <select id="category" required>
+                    <option value="" disabled selected>Select category</option>
+                    <option value="Taxi Cost">Taxi Cost</option>
+                </select>
+
+                <!-- Value input -->
+                <label for="value">Value</label>
+                <input type="number" id="value" placeholder="Enter value" min="0" required> 
+
+                <button type="submit">Submit</button>
+            </form>
+        </article>
 
     </div>
 
+    <!-- Footer -->
     <footer>
         CID Leaderboards • Updated automatically
     </footer>
@@ -54,10 +89,8 @@
     <script>
         // Most Expensive Taxi
         var sheetId = 108731431; 
-        var tableId =  "#most_expensive_taxi";
+        var tableId =  "most_expensive_taxi";
         fetchSheet(sheetId, tableId);
-
-        console.log("update 5");
     </script>
 </body>
 </html>
