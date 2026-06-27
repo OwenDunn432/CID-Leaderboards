@@ -22,7 +22,7 @@ function makeTable(json, tableId) {
     const table = document.querySelector(tableId);
     const tbody = table.querySelector("tbody");
 
-    rows.forEach((row, index) => {
+    rows.forEach((row, index = 0) => {
         const tr = document.createElement("tr");
 
         const order = index + 1;
