@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial Black", system-ui, sans-serif;
+    background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+    color: #fff;
+}
+
+/* ================= HERO ================= */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #111, #1f1f3a);
+    border-bottom: 3px solid #FFC107;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: #FFC107;
+    text-shadow: 0 0 10px #FFC107;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* ================= CARD ================= */
+.card {
+    width: 100%;
+    background: linear-gradient(145deg, #1b1b2f, #141427);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 0 18px rgba(255, 193, 7, 0.12);
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    display: none;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.2s ease;
+}
+
+tr:hover {
+    background: rgba(255, 193, 7, 0.08);
+}
+
+/* ================= CELLS ================= */
+td:nth-child(1) {
+    color: #FFC107;
+    font-weight: bold;
+    max-width: 40px;
+}
+
+td:nth-child(2) {
+    color: #fff;
+}
+
+td:nth-child(3) {
+    color: #00ffcc;
+    text-align: right;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    font-size: 0.85rem;
+}
