@@ -18,17 +18,19 @@ function fetchSheet(id, tableId) {
 
 function makeTable(json, tableId) {
     const rows = json.table.rows;
-    
+
     const table = document.querySelector(tableId);
     const tbody = table.querySelector("tbody");
 
-    rows.forEach(row => {
+    rows.forEach(row, index => {
         const tr = document.createElement("tr");
-
+        
+        const order = index + 1;
         const name = row.c[0]?.v ?? "";
         const value = row.c[1]?.v ?? "";
 
         tr.innerHTML = `
+            <td>${order}</td>
             <td>${name}</td>
             <td>${value}</td>
         `;
