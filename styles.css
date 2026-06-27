@@ -4,16 +4,10 @@
     box-sizing: border-box;
 }
 
-/*
 body {
     font-family: "Arial Black", system-ui, sans-serif;
     background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
     color: #fff;
-}
-*/
-
-body {
-    background: red;
 }
 
 /* ================= HERO ================= */
