@@ -22,9 +22,9 @@ function makeTable(json, tableId) {
     const table = document.querySelector(tableId);
     const tbody = table.querySelector("tbody");
 
-    rows.forEach(row, index => {
+    rows.forEach((row, index) => {
         const tr = document.createElement("tr");
-        
+
         const order = index + 1;
         const name = row.c[0]?.v ?? "";
         const value = row.c[1]?.v ?? "";
@@ -37,4 +37,4 @@ function makeTable(json, tableId) {
 
         tbody.appendChild(tr);
     });
-}   
+} 
