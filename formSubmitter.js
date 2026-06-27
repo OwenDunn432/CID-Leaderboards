@@ -1,0 +1,42 @@
+console.log("Running formSubmitter.js script");
+
+const google = "https://script.google.com/macros/s/AKfycbw35NY4s-WkrVW2syySvqkm4NSFy_dmCgjHZFHR6rBmdWjCiBLlV9rKsNfmupRmO67GVQ/exec";
+
+document.getElementById("score_form").addEventListener("submit", sendData);
+
+//Calls apps script
+async function sendData(event) {
+
+  event.preventDefault();
+
+  //Gets data from the document
+  const name = document.getElementById("name").value;
+  const category = document.getElementById("category").value;
+  const value = document.getElementById("value").value;
+
+  // Passed into the body
+  const payload = {
+    name,
+    category,
+    value
+  };
+
+  try {
+
+    await fetch(google, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { 
+        "Content-Type" : "application/json" 
+      },
+      body: JSON.stringify(payload),
+    });
+    
+    // Force refresh after data submission is complete
+    window.location.reload();
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+
+}

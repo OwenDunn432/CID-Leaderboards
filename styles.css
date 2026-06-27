@@ -203,22 +203,22 @@ tr:hover {
 }
 
 /*============ SCORE SUBMISSION FORM ============ */
-.score_form {
+#score_form {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 10px;
 }
 
-.score_form label {
+#score_form label {
     color: var(--text);
     font-size: 0.85rem;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-.score_form input,
-.score_form select {
+#score_form input,
+#score_form select {
     padding: 10px;
     border: 2px solid var(--purple);
     background: var(--bg);
@@ -229,13 +229,13 @@ tr:hover {
     font-family: inherit;
 }
 
-.score_form input:focus,
-.score_form select:focus {
+#score_form input:focus,
+#score_form select:focus {
     border-color: var(--cyan);
     box-shadow: 0 0 10px rgba(45,226,230,.25);
 }
 
-.score_form select {
+#score_form select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -254,7 +254,7 @@ tr:hover {
 }
 
 /* Button */
-.score_form button {
+#score_form button {
     margin-top: 8px;
     padding: 12px;
     border: none;
@@ -268,7 +268,7 @@ tr:hover {
     transition: 0.2s;
 }
 
-.score_form button:hover {
+#score_form button:hover {
     background: var(--cyan);
     color: black;
     transform: translateY(-2px);

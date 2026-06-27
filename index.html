@@ -18,7 +18,7 @@
 
     <!-- Nav Bar -->
     <nav>
-        <a href="">Taxi Cost</a>
+        <a href="">Taxi Cost</a> 
         <a href="">Second Link</a>
         <a href="">Third Link</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFIALWVALkwmnSRVYBl-EsQ_hLqI6AGEv2CtDCLYuL75yW5g/viewform?usp=dialog">New High Score Submission</a>
@@ -53,7 +53,7 @@
             <h3>Submit New Score</h3>
             <p> Use this form to submit a new score to the leaderboards! All submissions will be automatically updated to the site.</p>
 
-            <form class="score_form">
+            <form id="score_form">
 
                 <!-- Name dropdown -->
                 <label for="name">Name</label>
@@ -66,15 +66,16 @@
                 <label for="category">Score Category</label>
                 <select id="category" required>
                     <option value="" disabled selected>Select category</option>
-                    <option value="Taxi Cost">Taxi Cost</option>
+                    <option value="taxi_cost">Taxi Cost</option>
                 </select>
 
                 <!-- Value input -->
                 <label for="value">Value</label>
-                <input type="number" id="value" placeholder="Enter value" min="0" required> 
+                <input type="number" id="value" placeholder="Enter value" min="0" step="any" required> 
 
-                <button type="submit">Submit</button>
+                <button type="submit" id="score_form_submit">Submit</button>
             </form>
+            
         </article>
 
     </div>
@@ -85,6 +86,7 @@
     </footer>
 
     <!-- scripts -->
+    <script src="formSubmitter.js"></script>
     <script src="sheetFetcher.js"></script>
     <script>
         // Most Expensive Taxi

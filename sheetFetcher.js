@@ -1,5 +1,5 @@
 /**
- * This successfully works to make a table out of values in a Google sheet.
+ * Fetches values from a Google sheet and makes HTML tables from the data
  */
 
 function fetchSheet(id, tableId) {
