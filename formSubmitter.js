@@ -23,7 +23,7 @@ async function sendData(event) {
 
   try {
 
-    const response = await fetch(google, {
+    await fetch(google, {
       method: "POST",
       mode: "no-cors",
       headers: { 
@@ -31,17 +31,6 @@ async function sendData(event) {
       },
       body: JSON.stringify(payload),
     });
-
-
-    if (response.ok) {
-          // Leave button disabled until page refreshes
-          alert("Submission successful!");
-      } else {
-          // Re-enable if submission failed
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Submit";
-          alert("Submission failed.");
-      }
     
     // Force refresh after data submission is complete
     window.location.reload();
