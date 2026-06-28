@@ -1,6 +1,6 @@
 console.log("Running formSubmitter.js script");
 
-const google = "https://script.google.com/macros/s/AKfycbw35NY4s-WkrVW2syySvqkm4NSFy_dmCgjHZFHR6rBmdWjCiBLlV9rKsNfmupRmO67GVQ/exec";
+const google = "https://script.google.com/macros/s/AKfycbwygMviGFGCLFK6VLiidUOUuk0twIFmiKAqpXHKT4aLf5ahacRmwysRNTQAJdX2CAhWaw/exec";
 
 document.getElementById("score_form").addEventListener("submit", sendData);
 

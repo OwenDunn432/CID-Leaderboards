@@ -56,9 +56,9 @@
 
         <!-- MIH Referral -->
         <article class="card">
-            <table id="most_expensive_taxi">
+            <table id="mih_referrals">
                 
-                <h3>MIH Referrals</h3>
+                <h3>Daily MIH Referrals</h3>
                 <p>
                     Ranks the most MIH referrals successfully completed in a day by one person <br>
                     Got a new record? Submit it below to have it shown on the site!
@@ -126,6 +126,11 @@
         // Most Expensive Taxi
         var sheetId = 108731431; 
         var tableId =  "most_expensive_taxi";
+        fetchSheet(sheetId, tableId);
+
+        // Daily MIH Referrals
+        var sheetId = 1260553623;
+        var tableId = "mih_referrals";
         fetchSheet(sheetId, tableId);
     </script>
 </body>
