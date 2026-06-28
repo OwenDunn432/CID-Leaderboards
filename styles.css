@@ -32,6 +32,14 @@ body {
     linear-gradient(180deg, #090913, #070710);
 }
 
+p {
+    font-family: "Roboto", Arial, sans-serif; /* or "Roboto", "Inter", etc. */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+    letter-spacing: 0.3px;
+}
+
 /* ============ CRT SCANLINES ============ */
 
 body::after {
@@ -77,6 +85,9 @@ header p {
 
 /*============ NAV BAR ============ */
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;

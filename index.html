@@ -13,15 +13,17 @@
     <!-- Header Section -->
     <header>
         <h1>CID Leaderboards</h1>
-        <p>This is the CID leaderboards page! Here is a description of this page!</p>
+        <p>
+            Welcome to the CID leaderboards page! Submit your CID records below and see how you rank against others! <br>
+            This site is just for fun, no proof required but please be honest :)
+        </p>
     </header>
 
     <!-- Nav Bar -->
     <nav>
-        <a href="">Taxi Cost</a> 
-        <a href="">Second Link</a>
-        <a href="">Third Link</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFIALWVALkwmnSRVYBl-EsQ_hLqI6AGEv2CtDCLYuL75yW5g/viewform?usp=dialog">New High Score Submission</a>
+        <a href="#most_expensive_taxi">Taxi Price</a>
+        <a href="">MIH Referrals</a> 
+        <a href="#score_form" id="high_score_nav">High Score Submission</a>
     </nav>
 
     <!-- Leaderboards Section -->
@@ -33,7 +35,11 @@
         <article class="card">
             <table id="most_expensive_taxi">
                 
-                <h3>Taxi Cost</h3>
+                <h3>Taxi Price</h3>
+                <p>
+                    Taxi prices are sorted from most expensive to least expensive below. <br>
+                    If you have a new record for the most expensive taxi you've ordered, submit it below!
+                </p>
                 
                 <thead>
                     <tr>
@@ -42,24 +48,51 @@
                         <th>Cost</th>
                     </tr>
                 </thead>
+
                 <tbody class ="tbody"></tbody>
+            
             </table>
         </article>
-    
 
-        <!-- Score Submission Form -->
+        <!-- MIH Referral -->
+        <article class="card">
+            <table id="most_expensive_taxi">
+                
+                <h3>MIH Referrals</h3>
+                <p>
+                    Ranks the most MIH referrals successfully completed in a day by one person <br>
+                    Got a new record? Submit it below to have it shown on the site!
+                </p>
+                
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Referrals</th>
+                    </tr>
+                </thead>
+
+                <tbody class ="tbody"></tbody>
+                
+            </table>
+        </article>
+
+        <!-- Record Submission Form -->
         <article class="card">
 
-            <h3>Submit New Score</h3>
-            <p> Use this form to submit a new score to the leaderboards! All submissions will be automatically updated to the site.</p>
+            <h3>Submit New Record</h3>
+            <p> 
+                Got a new record to log on the site? Submit it here and have it uploaded to the site! <br>
+                All records submitted to the site are automatically updated, please ensure you truly want to submit a new record.
+            </p>
 
             <form id="score_form">
 
                 <!-- Name dropdown -->
                 <label for="name">Name</label>
                 <select id="name" required>
-                    <option value="" disabled selected>Select player</option>
-                    <option value="Owen">Owen Dunn</option>
+                    <option value="" disabled selected>Select Submitter</option>
+                    <option value="Owen Dunn">Owen Dunn</option>
                 </select>
 
                 <!-- Category dropdown -->
