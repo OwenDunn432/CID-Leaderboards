@@ -1,3 +1,7 @@
+/*
+* Submits data into a Google Sheet
+*/
+
 console.log("Running formSubmitter.js script");
 
 const google = "https://script.google.com/macros/s/AKfycbwygMviGFGCLFK6VLiidUOUuk0twIFmiKAqpXHKT4aLf5ahacRmwysRNTQAJdX2CAhWaw/exec";
