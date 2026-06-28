@@ -189,19 +189,35 @@ thead {
 thead tr:hover {
     background: transparent;
     box-shadow: none;
-    
 }
 
 tr {
+    display: flex;
+    justify-content: center;
+    padding: .5rem 1rem;
+}
+
+td { 
     font-weight:bold;
-    text-align:center;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 40px;
-    border-bottom:none;
-    transition:.2s;
-    cursor: default
+    font-size:1rem;
+}
+
+th:nth-child(1),
+td:nth-child(1) { 
+    width: 33%;
+    text-align: start;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 33%;
+    text-align: center;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 33%;
+    text-align: end;
 }
 
 tr:last-child {
@@ -262,6 +278,11 @@ tr:hover {
     letter-spacing: 0.5px;
 
     transition: 0.2s;
+}
+
+#score_form option,
+#score_form select {
+    font-size:1rem;
 }
 
 /* Button */
