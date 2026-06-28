@@ -1,0 +1,2 @@
+1. The taxi script does not run a comparison
+2. When an MIH and taxi script is both run, it does not show both tables on screen
