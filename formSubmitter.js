@@ -8,8 +8,19 @@ const google = "https://script.google.com/macros/s/AKfycbylUiiMATMGcbMYDDwj8wtuI
 
 document.getElementById("score_form").addEventListener("submit", sendData);
 
+let isSubmitting = false;
+
 //Calls apps script
 async function sendData(event) {
+
+  if (isSubmitting) {
+    console.log("Already submitting request");
+    return;
+  } 
+  
+  isSubmitting = true;
+
+  document.getElementById("score_form_submit").disabled = true;
 
   event.preventDefault();
 
